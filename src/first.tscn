@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://df7s3lfyp8urn"]
+[gd_scene load_steps=6 format=3 uid="uid://df7s3lfyp8urn"]
 
 [ext_resource type="Texture2D" uid="uid://cy814xnax1kaf" path="res://sprites/background.png" id="1_yf4oa"]
 [ext_resource type="Texture2D" uid="uid://bddhy53gmlgtd" path="res://candle.PNG" id="2_rrxdd"]
+[ext_resource type="Texture2D" uid="uid://4c8wuqk1uxdn" path="res://candle2.png" id="3_hpasl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tj3uc"]
 size = Vector2(12, 27)
@@ -11,6 +12,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_rrxdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hpasl")
 }],
 "loop": true,
 "name": &"flicker",
@@ -39,6 +43,7 @@ shape = SubResource("RectangleShape2D_tj3uc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Area2D"]
 sprite_frames = SubResource("SpriteFrames_7ycpc")
 animation = &"flicker"
+frame_progress = 0.430692
 
 [node name="Node2D" type="Node2D" parent="CanvasLayer"]
 position = Vector2(-233, 72)
