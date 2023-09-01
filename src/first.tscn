@@ -1,4 +1,3 @@
-
 [gd_scene load_steps=5 format=3 uid="uid://df7s3lfyp8urn"]
 
 [ext_resource type="Texture2D" uid="uid://cy814xnax1kaf" path="res://sprites/background.png" id="1_yf4oa"]
@@ -18,18 +17,19 @@ animations = [{
 "speed": 5.0
 }]
 
-
 [node name="first" type="Node2D"]
+position = Vector2(3, 411)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(-88, -291)
+position = Vector2(321, 203)
+scale = Vector2(0.578182, 0.625)
 texture = ExtResource("1_yf4oa")
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
 z_as_relative = false
-position = Vector2(58, 9)
+position = Vector2(504, 243)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
@@ -40,20 +40,18 @@ shape = SubResource("RectangleShape2D_tj3uc")
 sprite_frames = SubResource("SpriteFrames_7ycpc")
 animation = &"flicker"
 
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(-233, 72)
 
+[node name="Candle" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(467, 363)
+texture = ExtResource("2_rrxdd")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(145, 356)
-
-[node name="Candle" type="Sprite2D" parent="."]
-position = Vector2(229, 313)
-texture = ExtResource("2_qp07r")
-
-[node name="Candle2" type="Sprite2D" parent="."]
-position = Vector2(89, 325)
+[node name="Candle2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(312, 317)
 scale = Vector2(6.125, 3.3125)
-texture = ExtResource("2_qp07r")
+texture = ExtResource("2_rrxdd")
 
-[node name="Candle3" type="Sprite2D" parent="."]
-position = Vector2(-68, 140)
-texture = ExtResource("2_qp07r")
+[node name="Candle3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(170, 190)
+texture = ExtResource("2_rrxdd")
