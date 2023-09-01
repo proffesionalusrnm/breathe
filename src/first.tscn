@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://df7s3lfyp8urn"]
+[gd_scene load_steps=5 format=3 uid="uid://df7s3lfyp8urn"]
 
 [ext_resource type="Texture2D" uid="uid://cy814xnax1kaf" path="res://sprites/background.png" id="1_yf4oa"]
+[ext_resource type="Texture2D" uid="uid://bddhy53gmlgtd" path="res://candle.PNG" id="2_rrxdd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj3uc"]
+size = Vector2(12, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ycpc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rrxdd")
+}],
+"loop": true,
+"name": &"flicker",
+"speed": 5.0
+}]
 
 [node name="first" type="Node2D"]
 
@@ -9,3 +24,16 @@
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(552, 330)
 texture = ExtResource("1_yf4oa")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer"]
+z_as_relative = false
+position = Vector2(58, 9)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_tj3uc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Area2D"]
+sprite_frames = SubResource("SpriteFrames_7ycpc")
+animation = &"flicker"
