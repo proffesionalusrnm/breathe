@@ -1,11 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://df7s3lfyp8urn"]
+[gd_scene load_steps=3 format=3 uid="uid://df7s3lfyp8urn"]
 
 [ext_resource type="Texture2D" uid="uid://cy814xnax1kaf" path="res://sprites/background.png" id="1_yf4oa"]
+[ext_resource type="Texture2D" uid="uid://bddhy53gmlgtd" path="res://candle.PNG" id="2_qp07r"]
 
 [node name="first" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(552, 330)
+position = Vector2(-88, -291)
 texture = ExtResource("1_yf4oa")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(145, 356)
+
+[node name="Candle" type="Sprite2D" parent="."]
+position = Vector2(229, 313)
+texture = ExtResource("2_qp07r")
+
+[node name="Candle2" type="Sprite2D" parent="."]
+position = Vector2(89, 325)
+scale = Vector2(6.125, 3.3125)
+texture = ExtResource("2_qp07r")
+
+[node name="Candle3" type="Sprite2D" parent="."]
+position = Vector2(-68, 140)
+texture = ExtResource("2_qp07r")
