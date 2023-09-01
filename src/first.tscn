@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=5 format=3 uid="uid://df7s3lfyp8urn"]
 
 [ext_resource type="Texture2D" uid="uid://cy814xnax1kaf" path="res://sprites/background.png" id="1_yf4oa"]
@@ -17,12 +18,13 @@ animations = [{
 "speed": 5.0
 }]
 
+
 [node name="first" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(552, 330)
+position = Vector2(-88, -291)
 texture = ExtResource("1_yf4oa")
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
@@ -37,3 +39,21 @@ shape = SubResource("RectangleShape2D_tj3uc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Area2D"]
 sprite_frames = SubResource("SpriteFrames_7ycpc")
 animation = &"flicker"
+
+
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(145, 356)
+
+[node name="Candle" type="Sprite2D" parent="."]
+position = Vector2(229, 313)
+texture = ExtResource("2_qp07r")
+
+[node name="Candle2" type="Sprite2D" parent="."]
+position = Vector2(89, 325)
+scale = Vector2(6.125, 3.3125)
+texture = ExtResource("2_qp07r")
+
+[node name="Candle3" type="Sprite2D" parent="."]
+position = Vector2(-68, 140)
+texture = ExtResource("2_qp07r")
